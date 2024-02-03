@@ -6,14 +6,14 @@
     android:id="@+id/watchListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/royal_blue_dark">
+    android:background="#2F8755">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="52dp"
-        android:background="@drawable/market_content_bg"
+        android:background="@drawable/top_gainersss_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
