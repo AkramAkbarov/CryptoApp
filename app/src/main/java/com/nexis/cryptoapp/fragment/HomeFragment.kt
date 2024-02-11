@@ -34,12 +34,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding= FragmentHomeBinding.inflate(layoutInflater)
+
         getTopCurrencyList()
         setTabLayout()
         return binding.root
 
 
+
     }
+
 
     private fun setTabLayout() {
         val adapter =TopLossGainPagerAdapter(this)

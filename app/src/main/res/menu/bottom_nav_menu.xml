@@ -12,10 +12,11 @@
         android:icon="@drawable/ic_stats"
         android:title="Market"
         app:showAsAction="always"/>
-    <item android:id="@+id/watchlistFragment"
+
+    <item android:id="@+id/newspaperFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_bookmark"
-        android:title="Watchlist"
+        android:icon="@drawable/ic_newspaper"
+        android:title="Newspaper"
         app:showAsAction="always"/>
 
 </menu>

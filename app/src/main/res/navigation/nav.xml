@@ -9,15 +9,49 @@
         android:id="@+id/homeFragment"
         android:name="com.nexis.cryptoapp.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment">
+            <argument
+                android:name="data"
+                app:argType="com.nexis.cryptoapp.models.CryptoCurrency" />
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/marketFragment"
         android:name="com.nexis.cryptoapp.fragment.MarketFragment"
         android:label="fragment_market"
-        tools:layout="@layout/fragment_market" />
+        tools:layout="@layout/fragment_market" >
+        <action
+            android:id="@+id/action_marketFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" ><argument
+            android:name="data"
+            app:argType="com.nexis.cryptoapp.models.CryptoCurrency" /></action>
+    </fragment>
     <fragment
         android:id="@+id/watchlistFragment"
         android:name="com.nexis.cryptoapp.fragment.WatchListFragment"
         android:label="fragment_watch_list"
-        tools:layout="@layout/fragment_watch_list" />
+        tools:layout="@layout/fragment_watch_list" >
+        <action
+            android:id="@+id/action_watchlistFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.nexis.cryptoapp.fragment.DetailsFragment"
+        android:label="DetailsFragment" >
+
+        <argument
+            android:name="data"
+            app:argType="com.nexis.cryptoapp.models.CryptoCurrency"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/newspaperFragment"
+        android:name="com.nexis.cryptoapp.fragment.NewspaperFragment"
+        android:label="fragment_newspaper"
+        tools:layout="@layout/fragment_newspaper" />
 </navigation>

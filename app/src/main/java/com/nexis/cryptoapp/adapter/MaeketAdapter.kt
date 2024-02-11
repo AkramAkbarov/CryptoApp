@@ -4,13 +4,16 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nexis.cryptoapp.R
 import com.nexis.cryptoapp.databinding.CurrencyItemLayoutBinding
+import com.nexis.cryptoapp.fragment.HomeFragmentDirections
+import com.nexis.cryptoapp.fragment.MarketFragmentDirections
 import com.nexis.cryptoapp.models.CryptoCurrency
 
-class MaeketAdapter(var context: Context, val list: List<CryptoCurrency>):RecyclerView.Adapter<MaeketAdapter.MarketViewHolder>(){
+class MaeketAdapter(var context: Context, var list: List<CryptoCurrency>,var type: String):RecyclerView.Adapter<MaeketAdapter.MarketViewHolder>(){
 
     inner class MarketViewHolder(view: View):RecyclerView.ViewHolder(view){
         var binding = CurrencyItemLayoutBinding.bind(view)
@@ -18,6 +21,11 @@ class MaeketAdapter(var context: Context, val list: List<CryptoCurrency>):Recycl
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarketViewHolder {
         return MarketViewHolder(LayoutInflater.from(context).inflate(R.layout.currency_item_layout,parent,false))
+    }
+    fun  upDateData(dataItem:List<CryptoCurrency>){
+        list=dataItem
+        notifyDataSetChanged()
+
     }
 
     override fun getItemCount(): Int {
@@ -35,7 +43,7 @@ class MaeketAdapter(var context: Context, val list: List<CryptoCurrency>):Recycl
             .into(holder.binding.currencyImageView)
 
         Glide.with(context).load(
-            "https://s3.coinmarketcap.com/sparklines/web/7d/usd/"+ item.id+".png"
+            "https://s3.coinmarketcap.com/generated/sparklines/web/7d/usd/"+ item.id+".png"
         ).thumbnail(Glide.with(context).load(R.drawable.spinner))
             .into(holder.binding.currencyChartImageView)
 
@@ -52,5 +60,24 @@ class MaeketAdapter(var context: Context, val list: List<CryptoCurrency>):Recycl
             holder.binding.currencyChangeTextView.setTextColor(context.resources.getColor(R.color.red))
             holder.binding.currencyChangeTextView.text = "${String.format("%.02f",item.quotes[0].percentChange24h)}%"
         }
+
+        holder.itemView.setOnClickListener {
+            if (type=="home") {
+                findNavController(it).navigate(
+                    HomeFragmentDirections.actionHomeFragmentToDetailsFragment(item)
+                )
+            }else if (type=="market"){
+
+                findNavController(it).navigate(
+                    MarketFragmentDirections.actionMarketFragmentToDetailsFragment(item)
+                )
+
+            }
+        }
+
+
+
     }
+
+
 }

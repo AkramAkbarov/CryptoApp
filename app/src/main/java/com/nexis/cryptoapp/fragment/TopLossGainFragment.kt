@@ -7,7 +7,6 @@ import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import com.nexis.cryptoapp.R
 import com.nexis.cryptoapp.adapter.MaeketAdapter
 import com.nexis.cryptoapp.apis.ApiInterface
 import com.nexis.cryptoapp.apis.ApiUtilities
@@ -39,7 +38,7 @@ class TopLossGainFragment : Fragment() {
         lifecycleScope.launch (Dispatchers.IO){
             val res = ApiUtilities.getInstance().create(ApiInterface::class.java).getMarketData()
 
-            if (res.body()!=null){
+            if (res.body() !=null){
 
                 withContext(Dispatchers.Main){
                     val dataItem = res.body()!!.data.cryptoCurrencyList
@@ -56,7 +55,11 @@ class TopLossGainFragment : Fragment() {
                         for (i in 0..9){
                             list.add(dataItem[i])
 
-                            binding.topGainLoseRecyclerView.adapter = MaeketAdapter(requireContext(),list)
+                            binding.topGainLoseRecyclerView.adapter = MaeketAdapter(
+                                requireContext(),
+                                list,
+                                "home"
+                            )
                         }
                     }else{
 
@@ -64,7 +67,11 @@ class TopLossGainFragment : Fragment() {
                         for (i in 0..9){
                             list.add(dataItem[dataItem.size-1-i])
 
-                            binding.topGainLoseRecyclerView.adapter = MaeketAdapter(requireContext(),list)
+                            binding.topGainLoseRecyclerView.adapter = MaeketAdapter(
+                                requireContext(),
+                                list,
+                                "home"
+                            )
                         }
 
                     }
