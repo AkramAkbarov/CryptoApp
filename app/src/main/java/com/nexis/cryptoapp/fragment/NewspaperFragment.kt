@@ -38,10 +38,34 @@ class NewspaperFragment : Fragment() {
         Language("Son Zamanların Yıldızı: ERC","404 Coinleri 'Sıradaki Büyük\n" +
                 "Şey' mi? ", "https://kriptokoin.com/yildiz-erc-404-coinleri/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
             R.drawable.etherium),
+
         Language("Kaynaklar, ABD'de 110\n" +
                 "Milyon Kişinin Izlediği Super","Bowl Etkinliğinde Bitcoin Spot.."
             , "https://www.bitcoinsistemi.com/kaynaklar-abdde-110-milyon-kisinin-izledigi-super-bowl-etkinliginde-bitcoin-spot-etflerin-bulunup-bulunmayacagini-acikladi/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
             R.drawable.bitcoinabd),
+
+        Language("JPMorgan ve iki analistten\n" +
+                "Ethereum'un Spot ETF" ,"Açiklamasi!"
+            , "https://coinmuhendisi.com/blog/jpmorgan-ve-iki-analistten-ethereumun-spot-etf-aciklamasi/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
+            R.drawable.eth),
+
+        Language("Yarın, 0 16 Altcoin iİçin Kritik:"
+                 ,"İşte Olacakların Listesi!"
+            , "https://kriptokoin.com/16-altcoin-icin-olacaklarin-listesi-3/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
+            R.drawable.btc),
+
+        Language("LINK Coin Yükseliyor ve\n" +
+                "Uyarılar Boşa Değilmiş, Peki"
+            ,"Şimdi Ne Olacak?"
+            , "https://coin-turk.com/link-coin-yukseliyor-ve-uyarilar-bosa-degilmis-peki-simdi-ne-olacak?utm_source=coingecko&utm_medium=coingecko&utm_campaign=coingecko&utm_content=coingecko&utm_term=coingecko",
+            R.drawable.chainlink),
+
+        Language("Kripto Para Piyasası"
+
+            ,"Değerlendirmesi"
+            , "https://www.bitcoinhaber.net/kripto-para-piyasasi-degerlendirmesi/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
+            R.drawable.coinimg),
+
     )
 
     override fun onCreateView(
