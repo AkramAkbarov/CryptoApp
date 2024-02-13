@@ -59,13 +59,6 @@ class NewspaperFragment : Fragment() {
             ,"Şimdi Ne Olacak?"
             , "https://coin-turk.com/link-coin-yukseliyor-ve-uyarilar-bosa-degilmis-peki-simdi-ne-olacak?utm_source=coingecko&utm_medium=coingecko&utm_campaign=coingecko&utm_content=coingecko&utm_term=coingecko",
             R.drawable.chainlink),
-
-        Language("Kripto Para Piyasası"
-
-            ,"Değerlendirmesi"
-            , "https://www.bitcoinhaber.net/kripto-para-piyasasi-degerlendirmesi/?utm_source=coingecko&utm_content=coingecko&utm_campaign=coingecko&utm_medium=coingecko&utm_term=coingecko",
-            R.drawable.coinimg),
-
     )
 
     override fun onCreateView(
